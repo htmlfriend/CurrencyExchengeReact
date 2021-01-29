@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "81fe2cc7dc78f1dd85a1",
-    "url": "/CurrencyEchengeReact/static/css/main.c2cfb957.chunk.css"
+    "revision": "4ea3d4e6c19200b670cf",
+    "url": "/CurrencyEchengeReact/static/css/main.5527c50e.chunk.css"
   },
   {
-    "revision": "81fe2cc7dc78f1dd85a1",
-    "url": "/CurrencyEchengeReact/static/js/main.81fe2cc7.chunk.js"
+    "revision": "4ea3d4e6c19200b670cf",
+    "url": "/CurrencyEchengeReact/static/js/main.4ea3d4e6.chunk.js"
   },
   {
-    "revision": "ee24a1298dd2f0461a59",
-    "url": "/CurrencyEchengeReact/static/js/1.ee24a129.chunk.js"
+    "revision": "3a17d78e1d443e538816",
+    "url": "/CurrencyEchengeReact/static/js/1.3a17d78e.chunk.js"
   },
   {
     "revision": "13099cc40a79190543b1",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/CurrencyEchengeReact/static/media/USD.ff97e132.png"
   },
   {
-    "revision": "def013f01bbc000c5dbd3386d8bedefc",
+    "revision": "5c0125822691a0f71cf4d0ff16e77d56",
     "url": "/CurrencyEchengeReact/index.html"
   }
 ];
