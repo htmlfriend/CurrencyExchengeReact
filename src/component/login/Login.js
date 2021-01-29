@@ -4,12 +4,16 @@ import { Button } from "../button/Button";
 import "./Login.scss";
 
 export const Login = () => {
-  const { renderInputs } = useContext(RateContext);
+  const { renderInputs, state, loginHandler } = useContext(RateContext);
   return (
     <Fragment>
       <div className='modalForm'>{renderInputs()}</div>
       <div className='modalBtn'>
-        <Button text='enter' />
+        <Button
+          text='enter'
+          disabled={!state.isFormValid}
+          click={loginHandler}
+        />
       </div>
     </Fragment>
   );

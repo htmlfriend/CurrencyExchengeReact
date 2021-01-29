@@ -20,6 +20,10 @@ export default class App extends Component {
     super(props);
 
     this.state = {
+      auth: false,
+      error: "",
+      showModal: false,
+      isFormValid: false,
       formControlls: {
         email: {
           value: "",
@@ -115,9 +119,13 @@ export default class App extends Component {
     control.value = event.target.value;
     control.touched = true;
     control.valid = this.validateControl(control.value, control.validation);
-    console.log(control);
     formControlls[controlName] = control;
-    this.setState({ formControlls });
+    let isFormValid = true;
+
+    Object.keys(formControlls).forEach((item) => {
+      isFormValid = formControlls[item].valid && isFormValid;
+    });
+    this.setState({ formControlls, isFormValid });
   };
 
   renderInputs = () => {
@@ -140,6 +148,19 @@ export default class App extends Component {
   };
 
   // -----------------------------------
+
+  /**
+   * method for the modal form
+   */
+  modalShowHandler = () => {
+    this.setState({ showModal: true });
+  };
+
+  modalHideHandler = () => {
+    this.setState({ showModal: false });
+  };
+
+  // -------------------------
 
   /**
    * methods for the sample page
@@ -249,25 +270,91 @@ export default class App extends Component {
     });
   };
 
-  componentDidMount() {
-    //   // https://api.exchangeratesapi.io/latest?base=USD
-    //   this.getData().then((response) => {
-    //     let { rates } = response;
-    //     const currency = Object.assign({}, { ...this.state.currency });
+  /**
+   * Login and register pages with rest auth firebase
+   */
+  loginHandler = async () => {
+    const authData = {
+      email: this.state.formControlls.email.value,
+      password: this.state.formControlls.password.value,
+      returnSecureToken: true,
+    };
+    try {
+      const response = await axios.post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCY9FifWfznhm40hF4WkpQJHsmIoUDh9zg",
+        authData
+      );
+      if (response.data.idToken) {
+        const formControlls = { ...this.state.formControlls };
+        formControlls.email.value = "";
+        formControlls.password.value = "";
+        this.setState({
+          auth: true,
+          showModal: false,
+          error: "",
+          formControlls,
+        });
+      }
+    } catch (error) {
+      this.setState({
+        error: "Try again.Login is wrong!",
+      });
+    }
+  };
 
-    //     Object.keys(rates).forEach((item) => {
-    //       Object.keys(currency).forEach((elem) => {
-    //         if (elem === item) {
-    //           currency[item].course = rates[item];
-    //         }
-    //       });
-    //     });
-    //     this.setState({
-    //       rate: response.rates,
-    //       date: response.date,
-    //       currency: currency,
-    //     });
-    //   });
+  registerHandler = async () => {
+    const authData = {
+      email: this.state.formControlls.email.value,
+      password: this.state.formControlls.password.value,
+      returnSecureToken: true,
+    };
+
+    try {
+      const response = await axios.post(
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCY9FifWfznhm40hF4WkpQJHsmIoUDh9zg",
+        authData
+      );
+
+      if (response.data.idToken) {
+        const formControlls = { ...this.state.formControlls };
+        formControlls.email.value = "";
+        formControlls.password.value = "";
+        this.setState({
+          auth: true,
+          showModal: false,
+          error: "",
+          formControlls,
+        });
+      }
+    } catch (error) {
+      this.setState({
+        error:
+          "Try again.Registration is failed! Something went wrong on our server",
+      });
+    }
+  };
+
+  //------------------------
+
+  componentDidMount() {
+    // https://api.exchangeratesapi.io/latest?base=USD
+    this.getData().then((response) => {
+      let { rates } = response;
+      const currency = Object.assign({}, { ...this.state.currency });
+
+      Object.keys(rates).forEach((item) => {
+        Object.keys(currency).forEach((elem) => {
+          if (elem === item) {
+            currency[item].course = rates[item];
+          }
+        });
+      });
+      this.setState({
+        rate: response.rates,
+        date: response.date,
+        currency: currency,
+      });
+    });
     /**
      * state for the page 'reducer'. The previous request to the data.
      */
@@ -294,9 +381,16 @@ export default class App extends Component {
           dataWrite: this.dataWrite,
           sampleRemove: this.sampleRemove,
           renderInputs: this.renderInputs,
+          modalShowHandler: this.modalShowHandler,
+          modalHideHandler: this.modalHideHandler,
+          loginHandler: this.loginHandler,
+          registerHandler: this.registerHandler,
         }}
       >
-        <Dark />
+        <Dark
+          showModal={this.state.showModal}
+          modalHideHandler={this.modalHideHandler}
+        />
         <Modal />
         <Layout />
       </RateContext.Provider>

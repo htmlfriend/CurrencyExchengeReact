@@ -12,7 +12,12 @@
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  display: block;
+  display: none;
+
+  .error {
+    text-align: center;
+    color: #f01f30;
+  }
 }
 
 .modalHead {
@@ -43,4 +48,8 @@
   i {
     font-size: 1vw;
   }
+}
+
+.modalShow {
+  display: block;
 }
