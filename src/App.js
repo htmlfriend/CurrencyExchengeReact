@@ -281,7 +281,7 @@ export default class App extends Component {
     };
     try {
       const response = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCY9FifWfznhm40hF4WkpQJHsmIoUDh9zg",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=",
         authData
       );
       if (response.data.idToken) {
@@ -311,7 +311,7 @@ export default class App extends Component {
 
     try {
       const response = await axios.post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCY9FifWfznhm40hF4WkpQJHsmIoUDh9zg",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=",
         authData
       );
 
