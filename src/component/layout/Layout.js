@@ -28,9 +28,9 @@ const Layout = () => {
             <h2>
               You are watching the site like &nbsp; - &nbsp;
               {state.auth ? (
-                <> the authotorized user</>
+                <p> the authotorized user</p>
               ) : (
-                <> None authotarized user</>
+                <p> None authotarized user</p>
               )}
             </h2>
           </div>

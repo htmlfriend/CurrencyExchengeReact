@@ -1,9 +1,9 @@
 {
-  "main.css": "/CurrencyEchengeReact/static/css/main.c2cfb957.chunk.css",
-  "main.js": "/CurrencyEchengeReact/static/js/main.81fe2cc7.chunk.js",
-  "main.js.map": "/CurrencyEchengeReact/static/js/main.81fe2cc7.chunk.js.map",
-  "static/js/1.ee24a129.chunk.js": "/CurrencyEchengeReact/static/js/1.ee24a129.chunk.js",
-  "static/js/1.ee24a129.chunk.js.map": "/CurrencyEchengeReact/static/js/1.ee24a129.chunk.js.map",
+  "main.css": "/CurrencyEchengeReact/static/css/main.5527c50e.chunk.css",
+  "main.js": "/CurrencyEchengeReact/static/js/main.97342e8a.chunk.js",
+  "main.js.map": "/CurrencyEchengeReact/static/js/main.97342e8a.chunk.js.map",
+  "static/js/1.3a17d78e.chunk.js": "/CurrencyEchengeReact/static/js/1.3a17d78e.chunk.js",
+  "static/js/1.3a17d78e.chunk.js.map": "/CurrencyEchengeReact/static/js/1.3a17d78e.chunk.js.map",
   "runtime~main.js": "/CurrencyEchengeReact/static/js/runtime~main.13099cc4.js",
   "runtime~main.js.map": "/CurrencyEchengeReact/static/js/runtime~main.13099cc4.js.map",
   "static/media/CNY.png": "/CurrencyEchengeReact/static/media/CNY.dc8dc7aa.png",
@@ -12,8 +12,8 @@
   "static/media/JPY.png": "/CurrencyEchengeReact/static/media/JPY.9987aabc.png",
   "static/media/RUB.png": "/CurrencyEchengeReact/static/media/RUB.0c79b82e.png",
   "static/media/USD.png": "/CurrencyEchengeReact/static/media/USD.ff97e132.png",
-  "static/css/main.c2cfb957.chunk.css.map": "/CurrencyEchengeReact/static/css/main.c2cfb957.chunk.css.map",
+  "static/css/main.5527c50e.chunk.css.map": "/CurrencyEchengeReact/static/css/main.5527c50e.chunk.css.map",
   "index.html": "/CurrencyEchengeReact/index.html",
-  "precache-manifest.be03f9ce3a007efdca788216d8919e2a.js": "/CurrencyEchengeReact/precache-manifest.be03f9ce3a007efdca788216d8919e2a.js",
+  "precache-manifest.ed18f68ecc4f489f65cc4ea9bfb8cb2b.js": "/CurrencyEchengeReact/precache-manifest.ed18f68ecc4f489f65cc4ea9bfb8cb2b.js",
   "service-worker.js": "/CurrencyEchengeReact/service-worker.js"
 }
