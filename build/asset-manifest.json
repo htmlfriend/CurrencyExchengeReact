@@ -1,13 +1,13 @@
 {
-  "main.css": "/moviewatch/static/css/main.4b0594f0.chunk.css",
-  "main.js": "/moviewatch/static/js/main.9667485b.chunk.js",
-  "main.js.map": "/moviewatch/static/js/main.9667485b.chunk.js.map",
+  "main.css": "/moviewatch/static/css/main.a7e0e1fd.chunk.css",
+  "main.js": "/moviewatch/static/js/main.1dba8390.chunk.js",
+  "main.js.map": "/moviewatch/static/js/main.1dba8390.chunk.js.map",
   "static/js/1.1e972fb5.chunk.js": "/moviewatch/static/js/1.1e972fb5.chunk.js",
   "static/js/1.1e972fb5.chunk.js.map": "/moviewatch/static/js/1.1e972fb5.chunk.js.map",
   "runtime~main.js": "/moviewatch/static/js/runtime~main.0b78a1a1.js",
   "runtime~main.js.map": "/moviewatch/static/js/runtime~main.0b78a1a1.js.map",
-  "static/css/main.4b0594f0.chunk.css.map": "/moviewatch/static/css/main.4b0594f0.chunk.css.map",
+  "static/css/main.a7e0e1fd.chunk.css.map": "/moviewatch/static/css/main.a7e0e1fd.chunk.css.map",
   "index.html": "/moviewatch/index.html",
-  "precache-manifest.20d18803a1ce0f0959a05edaf6b21ed8.js": "/moviewatch/precache-manifest.20d18803a1ce0f0959a05edaf6b21ed8.js",
+  "precache-manifest.29978a294d9d5843d082fd1fff06421e.js": "/moviewatch/precache-manifest.29978a294d9d5843d082fd1fff06421e.js",
   "service-worker.js": "/moviewatch/service-worker.js"
 }
